@@ -5,32 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Digital Marketing Agency</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-    <!-- google fonts -->
+
+    <!-- FontAwesome link-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Poppins:wght@200;300;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- external css link -->
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">
-          <img src="images/logo/logo.png" alt="" />
-        </div>
-        <div class="brand-name">
-          <span>Agency</span>
-        </div>
-
+      <nav class="navbar">
         <ul class="nav-items">
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <div class="logo">
+            <img src="images/logo/logo.png" alt="" />
+            <span class="navbar-logo">Agency</span>
+          </div>
+          <li class="navbar-toggle" id="navbar-toggle">
+            <i class="fas fa-bars nav-icon"></i>
+          </li>
+          <li class="navbar-links"><a href="#about">About</a></li>
+          <li class="navbar-links"><a href="#service">Services</a></li>
+          <li class="navbar-links"><a href="#pricing">Pricing</a></li>
+          <li class="navbar-links"><a href="#blog">Blog</a></li>
+          <a href="#" class="navbar-links"
+            ><button class="contact-btn">CONTACT</button></a
+          >
         </ul>
-        <button class="contact-btn">CONTACT</button>
       </nav>
 
       <!-- banner -->
@@ -184,7 +196,7 @@
         <div>
           <h4>Agency</h4>
         </div>
-        <div>
+        <div class="menu-item">
           <h5>Menu</h5>
           <p>About</p>
           <p>Services</p>
@@ -218,5 +230,8 @@
         </div>
       </footer>
     </main>
+
+    <!-- Externaal javascript file -->
+    <script src="script.js"></script>
   </body>
 </html>

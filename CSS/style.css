@@ -1,6 +1,8 @@
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   font-family: "Epilogue", sans-serif;
   background-color: #fdf0e9;
 }
@@ -9,51 +11,44 @@ header {
   color: #fff;
   height: 400px;
 }
-nav {
-  display: flex;
-  justify-content: left;
-  height: 65px;
-}
-.logo {
-  margin: 16px 0px 351px 135px;
-  height: 48px;
-}
-.logo img {
-  height: 48px;
-  width: 48px;
-}
-.brand-name {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 30px;
-  padding-left: 14px;
-  height: 48px;
+.navbar-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.295743);
 }
 nav ul {
   display: flex;
-  margin: 28px 189px 0px 120px;
+  width: 100%;
+  align-items: center;
 }
-
+.logo {
+  flex: 1;
+  font-size: 1.5rem;
+  user-select: none;
+}
+.logo img {
+  margin-left: 149px;
+  margin-top: 30px;
+}
+.navbar-logo {
+  margin-left: 14px;
+}
+navbar-links {
+  margin-right: 135px;
+}
+nav ul {
+  margin-right: 135px;
+}
 nav ul li {
   list-style: none;
-  padding: 19px;
+  padding: 1rem;
 }
 
-.nav-items li a {
+nav a {
   text-decoration: none;
-  list-style: none;
-  color: #fff;
-  font-weight: 400;
-  padding-right: 40px;
-  text-decoration: none;
+  color: white;
 }
-.nav-items li a:hover {
-  color: #f3d1bf;
+.navbar-toggle {
+  display: none;
 }
-.contact-btn {
-  margin: 16px 135px 0px -60px;
-}
-
 .contact-btn {
   background: none;
   color: #fff;
@@ -65,10 +60,10 @@ nav ul li {
   font-weight: 900;
   cursor: pointer;
 }
-.contact-btn:hover {
-  background-color: #fff;
-  color: #28293e;
+.navbar-links:hover {
+  color: #f3d1bf;
 }
+
 .banner {
   text-align: center;
 }
@@ -96,8 +91,6 @@ nav ul li {
 }
 .col-md-6 h3 {
   font-size: 2.5rem;
-  margin-top: -10px;
-  margin-bottom: -8px;
 }
 .feature-date {
   font-size: 16px;
@@ -118,9 +111,7 @@ hr {
 .service-article {
   margin-top: 8px;
 }
-.service-para-up {
-  margin-bottom: -15px;
-}
+
 .service-para-down {
   margin-top: 10px;
   margin-bottom: 33px;
@@ -146,6 +137,7 @@ hr {
 .submit-btn:hover {
   background-color: #391400;
   color: #fff;
+  transition: all 0.3s ease 0s;
 }
 /* Newslatter */
 .divide-container {
@@ -163,9 +155,6 @@ hr {
 .input-form {
   width: 50%;
   height: 43px;
-  /* padding: 5px;
-  margin-top: 60px;
-  margin-right: 25px; */
 }
 
 /* contact Banner */
@@ -203,6 +192,9 @@ hr {
   padding: 4px;
 }
 /* footer section */
+footer {
+  padding-top: 16px;
+}
 .terms-privacy {
   display: flex;
   justify-content: right;
@@ -213,8 +205,35 @@ hr {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  nav {
+  header {
+    height: 72vh;
+    width: 100%;
+    padding: 5px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+  .navbar-toggle {
+    display: block;
+    height: 18px;
+    width: 18px;
+    margin: 16px 23px 0px 0px;
+    border-radius: 5px;
+  }
+  .navbar-links {
     display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .active {
+    display: block;
+  }
+  .logo img {
+    margin-left: 23px;
+  }
+  .navbar-logo {
+    margin-left: 14px;
+    bottom: 15px;
   }
   .row,
   .services,
@@ -231,9 +250,7 @@ hr {
   .col-md-6 h3 {
     font-size: 24px;
   }
-  /* .full-container {
-    background-color: blue;
-  } */
+
   hr {
     text-align: center;
     margin: 0px 23px 0px 23px;
@@ -285,11 +302,20 @@ hr {
   .service-list {
     text-align: center;
   }
+  .menu-item,
+  contact-lists {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   .social-media-icon {
     margin-top: 52px;
   }
   .copy-right-text {
     margin-top: 43px;
     text-align: center;
+  }
+  .terms-privacy {
+    padding-top: 15px;
+    margin-bottom: 5px;
   }
 }
